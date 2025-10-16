@@ -4,13 +4,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Интернет-магазин "ТехноМир"</title>
+    
+    <!-- Яндекс.Метрика -->
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function(m,e,t,r,i,k,a){
+            m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();
+            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+        })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=104670711', 'ym');
+
+        ym(104670711, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/104670711" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+    
     <style>
-        body { font-family: Arial; max-width: 1200px; margin: 0 auto; padding: 20px; }
-        header, footer { background: #f5f5f5; padding: 20px; margin: 10px 0; }
-        nav a { margin-right: 15px; text-decoration: none; color: #0066cc; }
-        .products { display: flex; gap: 20px; margin: 20px 0; }
-        .product { border: 1px solid #ddd; padding: 15px; border-radius: 5px; }
-        button { background: #0066cc; color: white; border: none; padding: 10px 15px; cursor: pointer; }
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        header, footer {
+            background: #f5f5f5;
+            padding: 20px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        nav a {
+            margin-right: 15px;
+            text-decoration: none;
+            color: #0066cc;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .products {
+            display: flex;
+            gap: 20px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+        .product {
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 5px;
+            flex: 1;
+            min-width: 200px;
+        }
+        button {
+            background: #0066cc;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+        button:hover {
+            background: #0052a3;
+        }
+        .newsletter {
+            background: #e9f7fe;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
     </style>
 </head>
 <body>
@@ -29,24 +91,26 @@
         <p>Мы предлагаем лучшую электронику по доступным ценам.</p>
         
         <!-- Форма подписки для цели -->
-        <div style="background: #e9f7fe; padding: 15px; margin: 20px 0;">
+        <div class="newsletter">
             <h3>Подпишитесь на рассылку</h3>
             <form id="subscribe-form">
-                <input type="email" placeholder="Ваш email" required style="padding: 8px; width: 250px;">
-                <button type="submit" onclick="ym(95123456,'reachGoal','subscribe')">Подписаться</button>
+                <input type="email" placeholder="Ваш email" required style="padding: 8px; width: 250px; margin-right: 10px;">
+                <button type="submit" onclick="ym(104670711,'reachGoal','subscribe')">Подписаться</button>
             </form>
         </div>
 
         <div class="products">
             <div class="product">
                 <h3>Смартфон XYZ</h3>
-                <p>Цена: 25 000 руб.</p>
-                <button onclick="ym(95123456,'reachGoal','add_to_cart')">В корзину</button>
+                <p>Мощный смартфон с отличной камерой</p>
+                <p><strong>25 000 руб.</strong></p>
+                <button onclick="ym(104670711,'reachGoal','add_to_cart')">В корзину</button>
             </div>
             <div class="product">
                 <h3>Ноутбук ABC</h3>
-                <p>Цена: 65 000 руб.</p>
-                <button onclick="ym(95123456,'reachGoal','add_to_cart')">В корзину</button>
+                <p>Идеальный для работы и игр</p>
+                <p><strong>65 000 руб.</strong></p>
+                <button onclick="ym(104670711,'reachGoal','add_to_cart')">В корзину</button>
             </div>
         </div>
     </main>
